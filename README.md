@@ -1,22 +1,23 @@
-# PROG 01: Crunch Time
+# CALORISTICS 
+### PROG 01: Crunch Time
 
-Briefly describe your app here.
+The purpose of the Caloristics Android application is to give users quick information about how many calories they have burned from doing their favorite exercises. 
+
+Depending on the exercise, users can enter in either the number of minutes they have spent or the amount of repetitions performed on an exercise to see how many calories they have burned. They will also see a comparison to other exercises, so that they know how much work they would have had to do in order to burn that many calories doing another activity.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Dalton Boll ([dboll@berkeley.edu](mailto:dboll@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [the Caloristics demo video] (https://www.youtube.com/watch?v=UBnjJHDt-Eo)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+#### Home Screen
+<img src="screenshots/1_home_screen" height="400" alt="Home Screen"/>
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
-
-*Feel free to enhance your README. For Markdown syntax, see [the GitHub Guides](https://guides.github.com/features/mastering-markdown/). Remove this line in your submission.*
+* Thank you to the example code in [Head First Android] (http://shop.oreilly.com/product/0636920029045.do) 
