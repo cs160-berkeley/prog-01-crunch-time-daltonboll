@@ -12,7 +12,7 @@ Dalton Boll ([dboll@berkeley.edu](mailto:dboll@berkeley.edu))
 
 ## Demo Video
 
-See [the Caloristics demo video] (https://www.youtube.com/watch?v=UBnjJHDt-Eo)
+See [the Caloristics demo video] (https://www.youtube.com/watch?v=UBnjJHDt-Eo).
 
 
 ## Screenshots
@@ -34,7 +34,7 @@ After the user has selected their desired exercise, they can hit the "BURN CALOR
 
 <img src="screenshots/3_pullup_calculation.png" height="400" alt="Rep-based Pullup Calculation"/>
 
-If the user selects a minute-based exercise (such as Cycling, Jogging, Jumping Jacks, Leg-Lifts, Planks, Stair-Climbing, or Swimming), Caloristics will automatically recognize that the user input is in minutes and not reps. This can be seen by the text: "Enter the number of minutes:". The user should then enter in the number of minutes of exercise they did.
+If the user selects a minute-based exercise (such as Cycling, Jogging, Jumping Jacks, Leg-Lifts, Planks, Stair-Climbing, or Swimming), Caloristics will automatically recognize that the user input is in minutes and not reps. This can be seen by the text: "Enter the number of minutes:". The user should then enter in the number of minutes of exercise they did before hitting the "BURN CALORIES!" button.
 
 <img src="screenshots/4_cycling_calculation.png" height="400" alt="Minute-based Cycling Calculation"/>
 
