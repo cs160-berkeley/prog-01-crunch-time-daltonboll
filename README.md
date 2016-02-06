@@ -67,6 +67,10 @@ Caloristics allows calorie calculations for the following exercises:
 * Walking
 
 
+## .APK File
+Find the .apk file [here] (https://github.com/cs160-sp16/prog-01-crunch-time-daltonboll/tree/master/Caloristics/app/build/outputs/apk).
+
+
 ## Acknowledgments
 
 * Thank you to the example code in [Head First Android] (http://shop.oreilly.com/product/0636920029045.do) 
