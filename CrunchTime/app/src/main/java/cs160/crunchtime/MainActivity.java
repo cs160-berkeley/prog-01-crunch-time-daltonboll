@@ -8,8 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Spinner;
+import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
+
+    // Initialize mapping of exercises to time/reps needed to burn 100 calories
+    public Map<String, Double> unitFor100Calories = new HashMap<String, Double>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +32,46 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        // set up our hash map
+        initializeCalorieHashMap();
+    }
+
+    // Initialize our HashMap of exercises to units for 100 calories
+    public void initializeCalorieHashMap() {
+        unitFor100Calories.put("Situps", 200.0);
+        unitFor100Calories.put("Pushups", 350.0);
+        unitFor100Calories.put("Jumping Jacks", 10.0);
+        unitFor100Calories.put("Jogging", 12.0);
     }
 
     // Call when the user clicks the burn calories button
     public void onClickConvertToCalories(View view) {
     System.out.println("BUTTON WAS CLICKED!");
+    TextView exercises = (TextView) findViewById(R.id.exercises);
+    exercises.setText("Let's burn some calories!");
+    Spinner exerciseSpinner = (Spinner) findViewById(R.id.exercise_spinner);
+    String selectedExercise = String.valueOf(exerciseSpinner.getSelectedItem());
+    System.out.println("The item we have selected is: " + selectedExercise);
+
+    double caloriesBurned = getCalories(selectedExercise, 10, "reps");
+    exercises.setText("Calories Burned: " + String.valueOf(caloriesBurned));
+    }
+
+    // return the calculated calories burned from the specified exercise and duration
+    double getCalories(String exercise, int duration, String repsOrMinutes) {
+        double caloriesBurned = 0.0;
+        double conversionFactorFor100Calories = unitFor100Calories.get(exercise);
+        caloriesBurned = (duration / conversionFactorFor100Calories) * 100;
+        return round(caloriesBurned);
+    }
+
+    // round a Double to two decimal places
+    double round(double number) {
+        double rounded = number;
+        rounded = rounded * 100;
+        rounded = Math.round(rounded);
+        rounded = rounded / 100;
+        return rounded;
     }
 
     @Override

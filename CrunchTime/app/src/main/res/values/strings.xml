@@ -9,6 +9,7 @@
     <string name="reps">reps</string>
     <string name="minutes">minutes</string>
     <string name="burn_calories">BURN CALORIES!</string>
+    <string name="exercises">Select and exercise:</string>
 
     <string-array name="exercises">
         <item>Pushups</item>
