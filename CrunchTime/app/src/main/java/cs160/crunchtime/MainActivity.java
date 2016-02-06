@@ -12,7 +12,7 @@ import android.widget.*;
 import java.util.*;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.text.Html;
-import android.text.method.ScrollingMovementMethod;
+import android.content.res.Configuration;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -209,4 +209,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
