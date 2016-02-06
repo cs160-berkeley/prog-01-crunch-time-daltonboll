@@ -25,19 +25,19 @@
         android:layout_height="wrap_content"
         android:text="@string/burn_calories"
         android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:onClick="onClickConvertToCalories"
-        android:layout_marginBottom="165dp" />
+        android:layout_below="@+id/duration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/exerciseSpinner"
         android:entries="@array/exercises"
-        android:layout_marginTop="86dp"
-        android:layout_below="@+id/message"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/selectExercise"
+        android:layout_alignStart="@+id/selectExercise"
+        android:layout_marginTop="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,18 +45,18 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/calories_burned"
         android:id="@+id/caloriesBurned"
-        android:layout_marginTop="65dp"
-        android:layout_alignTop="@+id/button"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_an_exercise"
         android:id="@+id/selectExercise"
-        android:layout_alignBaseline="@+id/exerciseSpinner"
-        android:layout_alignBottom="@+id/exerciseSpinner"
-        android:layout_alignStart="@+id/message" />
+        android:layout_below="@+id/message"
+        android:layout_alignStart="@+id/message"
+        android:layout_marginTop="49dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -64,14 +64,15 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/duration"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/selectExercise" />
+        android:layout_alignBottom="@+id/enterDuration"
+        android:layout_toEndOf="@+id/button" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_duration"
         android:id="@+id/enterDuration"
-        android:layout_above="@+id/duration"
-        android:layout_alignStart="@+id/duration" />
+        android:layout_below="@+id/exerciseSpinner"
+        android:layout_alignStart="@+id/exerciseSpinner"
+        android:layout_marginTop="38dp" />
 </RelativeLayout>

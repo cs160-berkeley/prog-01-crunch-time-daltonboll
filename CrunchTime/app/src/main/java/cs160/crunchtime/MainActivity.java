@@ -85,10 +85,16 @@ public class MainActivity extends AppCompatActivity {
     public void onClickConvertToCalories(View view) {
     TextView calorieNotification = (TextView) findViewById(R.id.caloriesBurned);
     Spinner exerciseSpinner = (Spinner) findViewById(R.id.exerciseSpinner);
-        String exercise = String.valueOf(exerciseSpinner.getSelectedItem());
+    String exercise = String.valueOf(exerciseSpinner.getSelectedItem());
+    int duration;
+
 
     EditText durationEntered = (EditText) findViewById(R.id.duration);
-        int duration = Integer.parseInt(durationEntered.getText().toString());
+    try {
+        duration = Integer.parseInt(durationEntered.getText().toString());
+    } catch (NumberFormatException e) {
+        duration = 0;
+    }
 
     double caloriesBurned = getCalories(exercise, duration);
     calorieNotification.setText("Calories Burned: " + String.valueOf(caloriesBurned));
