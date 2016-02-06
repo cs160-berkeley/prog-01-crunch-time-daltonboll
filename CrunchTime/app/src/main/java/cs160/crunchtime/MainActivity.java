@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.*;
 import java.util.*;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.text.Html;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     public Map<String, Double> unitFor100Calories = new HashMap<String, Double>();
     // Initialize mapping of exercises to "reps" or "minutes"
     public Map<String, String> exerciseToDuration = new HashMap<String, String>();
+    // Initialize ArrayList of exercises
+    public ArrayList<String> exerciseList = new ArrayList<String>();
 
     // Static strings
     public String REPS = "reps";
@@ -79,25 +82,56 @@ public class MainActivity extends AppCompatActivity {
         exerciseToDuration.put("Pushups", REPS);
         exerciseToDuration.put("Jumping Jacks", MINUTES);
         exerciseToDuration.put("Jogging", MINUTES);
+
+        exerciseList.add("Situps");
+        exerciseList.add("Pushups");
+        exerciseList.add("Jumping Jacks");
+        exerciseList.add("Jogging");
+    }
+
+    // Get the grid conversion for other exercises
+    String getGrid(String baseExercise, Double caloriesBurned) {
+        String gridString = "Here's what you'd have to do to burn " + caloriesBurned.toString() + " calories for other exercises:<br /><br />";
+
+        for (String exercise:exerciseList) {
+            if (!exercise.equals(baseExercise)) {
+                String type = exerciseToDuration.get(exercise);
+                Double duration = getDurationFromCalories(exercise, caloriesBurned);
+                String line = "<b>" + exercise + "</b>" + ": " + duration.toString() + " " + type + "<br />";
+                gridString += line;
+            }
+        }
+
+        return gridString;
+    }
+
+    // Get the duration it takes for a given exercise to burn a given amount of calories
+    double getDurationFromCalories(String exercise, double caloriesBurned) {
+        double conversionFactorFor100Calories = unitFor100Calories.get(exercise);
+        double duration = caloriesBurned * conversionFactorFor100Calories / 100;
+        return round(duration);
     }
 
     // Call when the user clicks the burn calories button
     public void onClickConvertToCalories(View view) {
-    TextView calorieNotification = (TextView) findViewById(R.id.caloriesBurned);
-    Spinner exerciseSpinner = (Spinner) findViewById(R.id.exerciseSpinner);
-    String exercise = String.valueOf(exerciseSpinner.getSelectedItem());
-    int duration;
+        TextView calorieNotification = (TextView) findViewById(R.id.caloriesBurned);
+        Spinner exerciseSpinner = (Spinner) findViewById(R.id.exerciseSpinner);
+        String exercise = String.valueOf(exerciseSpinner.getSelectedItem());
+        int duration;
 
+        EditText durationEntered = (EditText) findViewById(R.id.duration);
+        try {
+            duration = Integer.parseInt(durationEntered.getText().toString());
+        } catch (NumberFormatException e) {
+            duration = 0;
+        }
 
-    EditText durationEntered = (EditText) findViewById(R.id.duration);
-    try {
-        duration = Integer.parseInt(durationEntered.getText().toString());
-    } catch (NumberFormatException e) {
-        duration = 0;
-    }
+        double caloriesBurned = getCalories(exercise, duration);
+        calorieNotification.setText("Calories Burned: " + String.valueOf(caloriesBurned));
 
-    double caloriesBurned = getCalories(exercise, duration);
-    calorieNotification.setText("Calories Burned: " + String.valueOf(caloriesBurned));
+        String conversionGrid = getGrid(exercise, caloriesBurned);
+        TextView listedConversions = (TextView) findViewById(R.id.listedConversions);
+        listedConversions.setText(Html.fromHtml(conversionGrid));
     }
 
     // Call when the user selects a new exercise from the Spinner. Updates the text
