@@ -16,9 +16,17 @@
     <string name="exercise_grid"></string>
 
     <string-array name="exercises">
+        <item>Cycling</item>
+        <item>Jogging</item>
+        <item>Jumping Jacks</item>
+        <item>Leg-Lifts</item>
+        <item>Planks</item>
+        <item>Pullups</item>
         <item>Pushups</item>
         <item>Situps</item>
-        <item>Jumping Jacks</item>
-        <item>Jogging</item>
+        <item>Squats</item>
+        <item>Stair-Climbing</item>
+        <item>Swimming</item>
+        <item>Walking</item>
     </string-array>
 </resources>

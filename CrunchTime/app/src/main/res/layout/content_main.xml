@@ -80,6 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
+        android:scrollbars="vertical"
         android:id="@+id/listedConversions"
         android:layout_marginTop="27dp"
         android:layout_below="@+id/caloriesBurned"

@@ -12,6 +12,7 @@ import android.widget.*;
 import java.util.*;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,22 +72,44 @@ public class MainActivity extends AppCompatActivity {
 
     // Initialize our exercise HashMaps
     public void initializeHashMaps() {
-        String reps = "reps";
-
-        unitFor100Calories.put("Situps", 200.0);
-        unitFor100Calories.put("Pushups", 350.0);
-        unitFor100Calories.put("Jumping Jacks", 10.0);
+        unitFor100Calories.put("Cycling", 12.0);
         unitFor100Calories.put("Jogging", 12.0);
+        unitFor100Calories.put("Jumping Jacks", 10.0);
+        unitFor100Calories.put("Leg-Lifts", 25.0);
+        unitFor100Calories.put("Planks", 25.0);
+        unitFor100Calories.put("Pullups", 100.0);
+        unitFor100Calories.put("Pushups", 350.0);
+        unitFor100Calories.put("Situps", 200.0);
+        unitFor100Calories.put("Squats", 225.0);
+        unitFor100Calories.put("Stair-Climbing", 15.0);
+        unitFor100Calories.put("Swimming", 13.0);
+        unitFor100Calories.put("Walking", 20.0);
 
-        exerciseToDuration.put("Situps", REPS);
-        exerciseToDuration.put("Pushups", REPS);
-        exerciseToDuration.put("Jumping Jacks", MINUTES);
+        exerciseToDuration.put("Cycling", MINUTES);
         exerciseToDuration.put("Jogging", MINUTES);
+        exerciseToDuration.put("Jumping Jacks", MINUTES);
+        exerciseToDuration.put("Leg-Lifts", MINUTES);
+        exerciseToDuration.put("Planks", MINUTES);
+        exerciseToDuration.put("Pullups", REPS);
+        exerciseToDuration.put("Pushups", REPS);
+        exerciseToDuration.put("Situps", REPS);
+        exerciseToDuration.put("Squats", REPS);
+        exerciseToDuration.put("Stair-Climbing", MINUTES);
+        exerciseToDuration.put("Swimming", MINUTES);
+        exerciseToDuration.put("Walking", MINUTES);
 
-        exerciseList.add("Situps");
-        exerciseList.add("Pushups");
-        exerciseList.add("Jumping Jacks");
+        exerciseList.add("Cycling");
         exerciseList.add("Jogging");
+        exerciseList.add("Jumping Jacks");
+        exerciseList.add("Leg-Lifts");
+        exerciseList.add("Planks");
+        exerciseList.add("Pullups");
+        exerciseList.add("Pushups");
+        exerciseList.add("Situps");
+        exerciseList.add("Squats");
+        exerciseList.add("Stair-Climbing");
+        exerciseList.add("Swimming");
+        exerciseList.add("Walking");
     }
 
     // Get the grid conversion for other exercises
@@ -131,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
         String conversionGrid = getGrid(exercise, caloriesBurned);
         TextView listedConversions = (TextView) findViewById(R.id.listedConversions);
+        listedConversions.setMovementMethod(new ScrollingMovementMethod());
         listedConversions.setText(Html.fromHtml(conversionGrid));
     }
 
