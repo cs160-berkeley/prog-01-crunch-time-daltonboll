@@ -38,15 +38,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         // Set up the spinner listener for when a new exercise has been selected
         exerciseSpinner = (Spinner) findViewById(R.id.exerciseSpinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -154,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
 
         String conversionGrid = getGrid(exercise, caloriesBurned);
         TextView listedConversions = (TextView) findViewById(R.id.listedConversions);
-        listedConversions.setMovementMethod(new ScrollingMovementMethod());
         listedConversions.setText(Html.fromHtml(conversionGrid));
     }
 
