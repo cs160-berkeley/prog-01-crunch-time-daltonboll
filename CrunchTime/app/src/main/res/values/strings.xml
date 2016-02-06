@@ -9,7 +9,10 @@
     <string name="reps">reps</string>
     <string name="minutes">minutes</string>
     <string name="burn_calories">BURN CALORIES!</string>
-    <string name="exercises">Select and exercise:</string>
+    <string name="calories_burned">Calories Burned: 0.0</string>
+    <string name="message">Calculate how many calories you\'ve burned below!</string>
+    <string name="select_an_exercise">Select an exercise:</string>
+    <string name="enter_duration">Enter the number of reps:</string>
 
     <string-array name="exercises">
         <item>Pushups</item>
