@@ -19,23 +19,28 @@ See [the Caloristics demo video] (https://www.youtube.com/watch?v=UBnjJHDt-Eo)
 
 #### Home Screen
 The entirety of the Caloristics application can be seen on the home screen:
+
 <img src="screenshots/1_home_screen.png" height="400" alt="Home Screen"/>
 
 #### Exercise Selection
 Users can select their desired exercise from the drop down box:
+
 <img src="screenshots/2_drop_down.png" height="400" alt="Exercise Selection"/>
 
 #### Example Calculations
 If the user selects a rep-based exercise (such as Pullups, Pushups, Situps, or Squats), Caloristics will automatically recognize that the user input is in reps and not minutes. This can be seen by the text: "Enter the number of reps:". The user should then enter in the number of reps they did.
 
 After the user has selected their desired exercise, they can hit the "BURN CALORIES!" button, which will calculate how many calories the user burned from their specified reps and exercise. Additionally, they will see a comparison list of all of the other exercises, showing them how many reps or minutes of each exercise they would have to do in order to burn the equivalent amount of calories.
+
 <img src="screenshots/3_pullup_calculation.png" height="400" alt="Rep-based Pullup Calculation"/>
 
 If the user selects a minute-based exercise (such as Cycling, Jogging, Jumping Jacks, Leg-Lifts, Planks, Stair-Climbing, or Swimming), Caloristics will automatically recognize that the user input is in minutes and not reps. This can be seen by the text: "Enter the number of minutes:". The user should then enter in the number of minutes of exercise they did.
+
 <img src="screenshots/4_cycling_calculation.png" height="400" alt="Minute-based Cycling Calculation"/>
 
 #### Landscape View
 Caloristics supports screen rotation into landscape view. Everything is properly preserved when the screen rotates. Overflowing content is also scrollable.
+
 <img src="screenshots/5_rotation_1.png" height="400" alt="Landscape View"/>
 
 
