@@ -28,16 +28,16 @@
         android:onClick="onClickConvertToCalories"
         android:layout_below="@+id/duration"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="61dp" />
+        android:layout_marginTop="45dp" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/exerciseSpinner"
         android:entries="@array/exercises"
-        android:layout_below="@+id/selectExercise"
-        android:layout_alignStart="@+id/selectExercise"
-        android:layout_marginTop="40dp" />
+        android:layout_alignTop="@+id/selectExercise"
+        android:layout_alignEnd="@+id/message"
+        android:layout_toEndOf="@+id/selectExercise" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
         android:id="@+id/caloriesBurned"
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:layout_marginTop="12dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:text="@string/enter_duration"
         android:id="@+id/enterDuration"
+        android:layout_marginTop="38dp"
         android:layout_below="@+id/exerciseSpinner"
-        android:layout_alignStart="@+id/exerciseSpinner"
-        android:layout_marginTop="38dp" />
+        android:layout_alignStart="@+id/selectExercise" />
 </RelativeLayout>
