@@ -8,4 +8,12 @@
     <string name="jogging">Jogging</string>
     <string name="reps">reps</string>
     <string name="minutes">minutes</string>
+    <string name="burn_calories">BURN CALORIES!</string>
+
+    <string-array name="exercises">
+        <item>Pushups</item>
+        <item>Situps</item>
+        <item>Jumping Jacks</item>
+        <item>Jogging</item>
+    </string-array>
 </resources>

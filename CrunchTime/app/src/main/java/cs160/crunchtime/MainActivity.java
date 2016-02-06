@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Call when the user clicks the burn calories button
+    public void onClickConvertToCalories(View view) {
+    System.out.println("BUTTON WAS CLICKED!");
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
