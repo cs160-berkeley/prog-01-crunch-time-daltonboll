@@ -41,7 +41,7 @@ If the user selects a minute-based exercise (such as Cycling, Jogging, Jumping J
 #### Landscape View
 Caloristics supports screen rotation into landscape view. Everything is properly preserved when the screen rotates. Overflowing content is also scrollable.
 
-<img src="screenshots/5_rotation_1.png" height="400" alt="Landscape View"/>
+<img src="screenshots/5_rotation_1.png" height="300" alt="Landscape View"/>
 
 
 ## Supported Devices
